@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import {FaBars,FaTimes} from "react-icons/fa";
 import { NavLink } from "react-router-dom";
-
+ 
 const NavBar = () => {
   const [navSize, setnavSize] = useState("5rem");
   const [navColor, setnavColor] = useState("transparent");
@@ -61,7 +61,7 @@ const [nav,setNav] = useState(false)
       color:"#fff"
     }}> 
         
-        <h1 className="text-4xl ml-3">CastilloWebDev</h1>
+        <h1 className="text-4xl ml-3">Castillo Web Dev</h1>
         
         <ul className="hidden md:flex">
           {links.map(({id, link, url})=>(

@@ -27,9 +27,9 @@ const RedesSociales = () => {
     ];
   return (
     <div className="my-5">
-        <ul className='flex flex-row justify-between mt-6'>
+        <ul className='flex flex-row mt-6'>
         {linksocial.map(({id,item,href})=>(
-            <li key={id} className="link-social bg-gradient-to-r from-orange-800 to-amber-900 text-white p-1 rounded-xl">
+            <li key={id} className="link-social bg-gradient-to-r from-orange-800 to-amber-900 text-white mr-3 p-1 rounded-xl">
                 <a href={href}>{item}</a>
             </li>
         ))}

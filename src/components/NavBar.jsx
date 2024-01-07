@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import {FaBars,FaTimes} from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+import { Link as LinkScroll } from 'react-scroll/modules'
+ 
  
 const NavBar = () => {
   const [navSize, setnavSize] = useState("5rem");
@@ -25,21 +27,22 @@ const [nav,setNav] = useState(false)
     },
     {
       id:2,
-      link:"about",
+      link:"acerca de mi",
       url:"/about",
     },
+    
     {
-      id:3,
+      id:4,
       link:"portafolio",
       url:"/portafolio",
     },
     {
-      id:4,
-      link:"experiencia",
-      url:"/experiencia",
+      id:5,
+      link:"utilidades",
+      url:"/utilidades",
     },
     {
-      id:5,
+      id:6,
       link:"contacto",
       url:"/contacto",
     },
@@ -53,6 +56,7 @@ const [nav,setNav] = useState(false)
       height: navSize,
       transition: "all 1s",
       position: "fixed",
+      zIndex:"999",
       width: "100%",
       alignItems: "center",
       display:"flex",
@@ -61,15 +65,28 @@ const [nav,setNav] = useState(false)
       color:"#fff"
     }}> 
         
-        <h1 className="text-4xl ml-3">Castillo Web Dev</h1>
+        <h1 className="logo hidden md:flex text-4xl ml-3"><NavLink to="/">Castillo Web Dev</NavLink></h1>
+        <h1 className="logo flex md:hidden text-4xl ml-3"><NavLink to="/">CWD</NavLink></h1>
         
         <ul className="hidden md:flex">
           {links.map(({id, link, url})=>(
             <li key={id} 
                 className="px-4 cursor-pointer capitalize font-medium text-white hover:scale-125">
-                <NavLink to={url}>{link}</NavLink>
-            </li>                
-          ))}          
+                <NavLink to={url}
+                style={({ isActive, isTransitioning }) => {
+                  return {
+                    fontWeight: isActive ? "bold" : "",                     
+                    borderBottom: isActive ? "solid 2px" : "",
+                    viewTransitionName: isTransitioning ? "smooth" : "",
+                  };
+                }}
+                >
+                  {link}
+                </NavLink>                
+            </li>    
+                   
+          ))}  
+                   
         </ul>
         <div onClick={()=>setNav(!nav)} className="cursor-pointer pr-4 z-10 text-gray-500 md:hidden">
           {nav ? <FaTimes size={30} /> : <FaBars size={30} />}          

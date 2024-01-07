@@ -4,12 +4,20 @@
 @tailwind utilities;
  
   body{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Kanit', sans-serif;
     background-color: #d8e1dc;
   }
- 
-h1, h2{
-  font-family: 'Rubik Doodle Shadow';
+
+h1.logo{
+  font-family: 'Rubik Glitch', sans-serif;
+  font-weight: 400;
+}
+h1, h2, h3{
+  font-family: 'Kanit', sans-serif;
+  font-weight: 800;
+}
+p{
+  color:#252734;
 }
 
  

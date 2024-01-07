@@ -1,6 +1,32 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import HeroImage from "../assets/img/heroimage.png"
 
+import { useInView, useMotionValue, useSpring } from 'framer-motion';
+
+const AnimarNumeros =({value})=>{
+const ref= useRef(null);
+
+const motionValue = useMotionValue(0);
+const springValue = useSpring(motionValue,{duration: 3000})
+const isInView = useInView(ref);
+
+useEffect(() => {
+   if(isInView){
+    motionValue.set(value);
+   }
+}, [isInView, value, motionValue])
+
+useEffect(() => {
+ springValue.on("change",(latest)=>{
+  if(ref.current && latest.toFixed(0)<=value){
+    ref.current.textContent =latest.toFixed(0);
+  }
+ })
+}, [springValue, value])
+
+
+  return <span ref = {ref}></span>
+}
 const AboutUno = () => {
   return (
     
@@ -24,7 +50,7 @@ const AboutUno = () => {
           <div className='col-span-2 flex flex-row md:flex-col items-start justify-between order-3'>
             <div className='flex flex-col items-end justify-center px-1'>
               <span className='inline-block text-4xl md:text-7xl font-bold text-yellow-50'>
-                +15
+                + <AnimarNumeros value={15} /> 
               </span>
               <h3 className='text-s text-center md:text-xl font-medium capitalize text-yellow-50'>
                 Clientes satisfechos
@@ -33,7 +59,7 @@ const AboutUno = () => {
 
             <div className='flex flex-col items-center md:items-end justify-center px-1'>
               <span className='inline-block text-4xl md:text-7xl font-bold text-yellow-50'>
-                4+
+              + <AnimarNumeros value={4} /> 
               </span>
               <h3 className='text-s text-center md:text-xl font-medium capitalize text-yellow-50'>
                 años de experiencia
@@ -42,7 +68,7 @@ const AboutUno = () => {
 
             <div className='flex flex-col items-end justify-center px-1'>
               <span className='inline-block text-4xl md:text-7xl font-bold text-yellow-50'>
-                20+
+                + <AnimarNumeros value={20} /> 
               </span>
               <h3 className='text-s text-center md:text-xl font-medium capitalize text-yellow-50'>
                 proyecto culminados

@@ -1,6 +1,7 @@
 import React from 'react'
 import { TiSocialTwitter,TiSocialInstagram,TiSocialGithub } from "react-icons/ti";
 import { IoIosMail } from "react-icons/io";
+import { motion } from 'framer-motion';
 
 const RedesSociales = () => {
     const linksocial=[
@@ -30,7 +31,16 @@ const RedesSociales = () => {
         <ul className='flex flex-row mt-6'>
         {linksocial.map(({id,item,href})=>(
             <li key={id} className="link-social bg-gradient-to-r from-orange-800 to-amber-900 text-white mr-3 p-1 rounded-xl">
-                <a href={href}>{item}</a>
+                <motion.div
+                  whileHover={{ scale: 1.6 }} 
+                    transition={{
+                    ease: "linear",
+                    duration: 5,
+                    x: { duration: 1 }
+                  }}                
+                >
+                  <a href={href}>{item}</a>
+                </motion.div>
             </li>
         ))}
         </ul>

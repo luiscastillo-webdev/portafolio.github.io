@@ -1,6 +1,7 @@
 import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import { NavLink } from "react-router-dom";
+import Seo from '../contenidos/Seo.jsx';
  
 
 function ContactForm() {
@@ -64,6 +65,11 @@ function ContactForm() {
 
 const Contacto = () => {
   return (
+    <>
+    <Seo 
+    titulo="Contacto | Desarrollo y Diseño Web | Freelancer"
+    descripcion="Desarrollador web con más de 5 años de experiencia"    
+  />
     <div id="contacto" className='w-full bg-gradient-to-r from-black to-[#252734] pt-10'>    
     <div className='encabezado py-14'>
       <h2 className='text-white text-center text-6xl'>Contacto</h2>
@@ -77,6 +83,7 @@ const Contacto = () => {
     </div>
     
     </div>
+    </>
   )
 }
 

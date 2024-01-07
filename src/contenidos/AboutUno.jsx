@@ -33,13 +33,17 @@ const AboutUno = () => {
     <div className='w-full items-center justify-center'>
         <div className='grid grid-cols-8 gap-4 md:gap-16 px-0 md:px-4'>
           <div className='col-span-8 md:col-span-3 order-2 md:order-1 items-start'>
-            <h2 className='mb-4 text-lg font-bold uppercase text-white'>biografia</h2>
-            <p className='text-lg text-white w-full'>
-              El trozo de texto estándar de Lorem Ipsum usado 
-              desde el año 1500 es reproducido debajo para aquellos interesados. Las secciones 
-              1.10.32 y 1.10.33 de "de Finibus Bonorum et Malorum" por Cicero son también reproducidas 
-              en su forma original exacta, acompañadas por versiones en Inglés de la traducción realizada en 1914 por H. Rackham
-              </p>
+            <h2 className='mb-4 text-lg font-bold uppercase text-white'>¿quién soy?</h2>
+            <p className='text-lg text-white w-full pb-2'>
+              Soy un profesional del desarrollo web con más de 5 años de experiencia en el sector. 
+              Me apasiona crear sitios web dinámicos, funcionales y atractivos, utilizando las mejores herramientas como 
+              y los lenguajes de programación PHP y React.
+            </p>
+            <p className='text-lg text-white w- pb-2'>
+                Además, tengo amplios conocimientos en el uso de plataformas 
+              como WordPress, Joomla y PrestaShop, que me permiten desarrollar páginas web adaptadas a las necesidades de cada cliente. 
+              Mi objetivo es ofrecer soluciones web de calidad, innovadoras y eficientes, que cumplan con los estándares de diseño y usabilidad.
+            </p>
           </div>
            
           <div className='col-span-8 mx-auto rounded-2xl border-l-2 border-t-2 border-r-[10px] border-b-[10px] border-solid

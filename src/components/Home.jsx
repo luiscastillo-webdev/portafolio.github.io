@@ -9,14 +9,23 @@ import { NavLink } from "react-router-dom";
 import { Link as LinkScroll } from 'react-scroll/modules'
 import Servicios from "./Servicios.jsx";
 import Contratame from "./Contratame.jsx"; 
+import { IoMdMailUnread } from 'react-icons/io';
+import Seo from '../contenidos/Seo.jsx';
+
  
 
  
 
 const Home = () => {
      
-  return (  
-    <> 
+  return ( 
+    <>  
+    
+    <Seo 
+        titulo="Desarrollo y Diseño Web | Freelancer"
+        descripcion="Desarrollo y diseño para tu web o emprendimiento, destacate delante los demas y llega a la cima"    
+    />
+   
     <div className="home h-screen w-full overflow-hidden" style={{backgroundImage:`url(${MuroImage})`,backgroundRepeat:'no-repeat',backgroundSize:'cover'}}>   
         <div className="max-w-screen-lg mx-auto grid grid-cols-1 items-center justify-center px-4 h-full md:grid-cols-2">
             <div className="items-center justify-center mt-16 md:mt-0">
@@ -54,7 +63,13 @@ const Home = () => {
     </div>
 
     <Servicios/>
-    <Contratame/>
+    <Contratame
+    titulo='Transforma tu idea en realidad con mi ayuda'
+    descrip='No esperes más y agenda tu cita conmigo. Te ofreceré un presupuesto personalizado y sin compromiso.'
+    boton='Contáctame'
+    icono={<IoMdMailUnread/>}
+    
+    />
     
     </> 
   )

@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       backgroundImage:{
-        luzCircular:'repeating-radial-gradient(rgba(255,255,255,0.4) 3px,#252734 5px,#252734 100px);'
+        luzCircular:'repeating-radial-gradient(rgba(255,255,255,0.4) 3px,#000 5px,#252734 50px);'
       },
     },
   },

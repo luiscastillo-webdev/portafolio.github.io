@@ -5,6 +5,7 @@ import Portafolio from "./components/Portafolio.jsx";
 import About from "./components/About.jsx";
 import Footer from "./components/Footer.jsx";
 import Contacto from "./components/Contacto.jsx";
+ 
 
  
 
@@ -12,7 +13,7 @@ function App() {
 
   return (
      
-    <BrowserRouter>
+    <BrowserRouter>      
       <NavBar />
       <Routes>
         <Route exact path="/" element={<Home/>}/>

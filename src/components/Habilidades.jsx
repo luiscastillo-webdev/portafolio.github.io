@@ -19,7 +19,8 @@ const Habilidades = () => {
   return (
     <>
         <h2 className='text-white text-7xl text-center w-full mt-[10rem]'>Habilidades</h2>
-        <div className='w-full h-screen flex items-center justify-center bg-luzCircular'>
+        <div className='w-full h-screen flex items-center justify-center bg-luzCircular rounded-3xl'>
+         
           <motion.div className='flex items-center justify-center rounded-full uppercase 
           font-bold text-white py-3 px-6 bg-amber-600 shadow-lime-200 cursor-pointer absolute'
           whileHover={{scale:1.05}}

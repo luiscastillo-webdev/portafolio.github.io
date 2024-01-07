@@ -11,7 +11,7 @@ const Clima = () => {
     ]);
     useEffect(() => {
         async function obtenerClima () {
-            const apiId = 'cc01bb00eb5f94b6122e597a6e3e87b9';
+            const apiId = import.meta.env.VITE_API_KEY;
             const city = 'valencia';
             const country = 'VE';
             const url = `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${apiId}`;

@@ -19,7 +19,7 @@ const Portafolio = () => {
               <ImgPortafolio/>
           </div>
        </div>
-        <Portafolio/>
+        <Contratame/>
     </div>
   )
 }

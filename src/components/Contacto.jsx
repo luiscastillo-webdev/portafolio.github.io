@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 function ContactForm() {
   const [state, handleSubmit] = useForm("xleqevjz");
   if (state.succeeded) {
-      return <p><NavLink to="/"> Thanks for joining!</NavLink></p>;
+      return <p><NavLink to="/"> Gracias Contactarme!</NavLink></p>;
   }
   return (
       <form onSubmit={handleSubmit} className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'>

@@ -7,9 +7,9 @@ import { IoMdMailUnread } from 'react-icons/io';
 
 const Contratame = () => {
   return (
-    <div id="contacto" className='w-full bg-gradient-to-r from-black to-[#252734] p-16'>
-        <div className='grid grid-cols-6 gap-4 '>
-            <div className='col-start-2 col-span-4 text-white text-2xl px-[6rem] py-[3rem] justify-center items-center text-center rounded-xl bg-gradient-to-r from-orange-500 to-amber-700 '>
+    <div id="contacto" className='w-full bg-gradient-to-r from-black to-[#252734] md:p-16'>
+        <div className='grid md:grid-cols-6 md:gap-4'>
+            <div className='md:col-span-4 text-white md:text-2xl md:px-[6rem] py-[3rem] justify-center items-center text-center rounded-xl bg-gradient-to-r from-orange-500 to-amber-700 '>
                 <h3 className='uppercase w-auto pb-5'>Transforma tu idea en realidad con mi ayuda</h3>
                 <p>No esperes más y agenda tu cita conmigo. Te ofreceré un presupuesto personalizado y sin compromiso.</p>
                 <motion.button

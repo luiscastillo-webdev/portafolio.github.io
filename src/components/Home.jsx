@@ -40,7 +40,7 @@ const Home = () => {
                         className="text-white px-6 py-3 my-2 mx-2
                         flex bg-gradient-to-r from-orange-500 to-amber-700 cursor-pointer"
                     >                     
-                       <LinkScroll to="servicios" spy={true} smooth={true} offset={0} dura>Servicios</LinkScroll>                        
+                       <LinkScroll to="servicios" spy={true} smooth={true} offset={0}>Servicios</LinkScroll>                        
                         <span className='pl-3 mt-1 hover:rotate-90'><SiAsciinema /></span>                      
                     </motion.button>
                 </div>

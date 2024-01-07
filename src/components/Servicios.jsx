@@ -50,12 +50,12 @@ const Servicios = () => {
     <div className='encabezado py-16'>
       <h2 className='text-white text-center  text-6xl'>Servicios</h2>
     </div>   
-      <div className='grid grid-cols-6 gap-2 max-w-screen-lg justify-center mx-auto'>
+      <div className='grid grid-cols-2 md:grid-cols-6 gap-1 md:gap-2 md:max-w-screen-lg justify-center mx-auto'>
 
         {servicio.map(({id,icono,titulo,descrip})=>(
-          <div key={id} className='mb-4 mx-auto rounded bg-slate-300 col-span-2 text-m md:text-xl shadow-2xl'>
+          <div key={id} className='mb-4 mx-auto rounded bg-slate-300 md:col-span-2 text-m md:text-xl shadow-2xl'>
             <motion.div
-            className='flex justify-center py-8 '
+            className='flex justify-center py-4 md:py-8'
             whileHover={{ scale: 1.2 }} 
             transition={{
               ease: "linear",
@@ -65,7 +65,7 @@ const Servicios = () => {
             >
               <span class="text-6xl shadow-inner rounded-full border border-amber-500">{icono}</span>
             </motion.div>
-            <div className="px-6 py-4">
+            <div className="px-2 md:px-6 py-4">
                 <div className="mb-4">
                   <h3 className='text-xl'>
                     {titulo}

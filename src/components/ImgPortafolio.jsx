@@ -15,9 +15,9 @@
           id:1,
           titulo:"CriptoMine",
           descrip:"Simple billetera para criptomonedas, para trading, esta plantilla es para la venta",
-          categ1:"Js",
-          categ2:"ventas",  
-          destacado:"bg-amber-600",         
+          categ1:"HTML, CSS, JS",
+          categ2:"Admin Lite",  
+          destacado:"bg-gradient-to-r from-green-400 to-blue-500",         
           imagen:CriptoMine,
           url:"https://www.templatemonster.com/website-templates/criptomine-wallet-website-template-248029.html",
           tituloBtn:"comprar",
@@ -84,7 +84,7 @@
     <div className='grid grid-cols-1 md:grid-cols-3 justify-center gap-2'>  
     {itemsimg.map(({id,imagen,destacado, tituloBtn,titulo,url,descrip,categ1,categ2})=>(
         <div key={id}
-        className={`${destacado} mb-4 rounded overflow-hidden shadow-inner`}>
+        className={`${destacado} mb-4 rounded overflow-hidden shadow-inner hover:from-pink-500 hover:to-yellow-500`}>
           <motion.div
            whileHover={{ scale: 1.2 }} 
            transition={{
@@ -104,8 +104,8 @@
               </p>
           </div>
           <div className='px-6 pt-4 pb-2'>             
-              <a href={url} target="_blank" rel='noreferrer' className="inline-block w-full bg-gray-200 rounded px-5 py-2 text-center uppercase
-               font-bold text-gray-700 mr-2 mb-2 hover:text-sky-600">
+              <a href={url} target="_blank" rel='noreferrer' className="inline-block w-full bg-gradient-to-r from-green-400 to-blue-500 rounded px-5 py-2 text-center uppercase
+               font-bold mr-2 mb-2">
              {tituloBtn}
             </a>                             
           </div>

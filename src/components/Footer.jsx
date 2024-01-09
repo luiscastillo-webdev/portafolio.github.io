@@ -9,10 +9,10 @@ const Footer = () => {
             <div className='flex flex-col col-span-6 md:col-span-2 text-center text-white text-m md:text-xl'>
               <h1 className='logo uppercase'>castillo web dev</h1> &copy;{(new Date().getFullYear())}
             </div>
-            <div className='flex flex-row items-center justify-center col-span-3 md:col-span-2 text-center text-white text-m md:text-xl'>
+            <div className='flex flex-row items-center justify-center col-span-6 md:col-span-2 text-center text-white text-m md:text-xl'>
                 Codificado con <span className='mx-2 inline-block text-cnter'><FaHeartbeat/></span> por K25
             </div>
-            <div className='flex flex-col col-span-3 md:col-span-2 items-center justify-center text-center text-white text-m md:text-xl'>
+            <div className='flex flex-col col-span-6 md:col-span-2 items-center justify-center text-center text-white text-m md:text-xl'>
                 <Clima />
             </div>
         </div>

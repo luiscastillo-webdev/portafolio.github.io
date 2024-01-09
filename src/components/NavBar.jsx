@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import {FaBars,FaTimes} from "react-icons/fa";
 import { NavLink } from "react-router-dom";
-import { Link as LinkScroll } from 'react-scroll/modules'
+ 
  
  
 const NavBar = () => {
@@ -36,13 +36,9 @@ const [nav,setNav] = useState(false)
       link:"portafolio",
       url:"/portafolio",
     },
+     
     {
       id:5,
-      link:"utilidades",
-      url:"/utilidades",
-    },
-    {
-      id:6,
       link:"contacto",
       url:"/contacto",
     },
@@ -96,7 +92,7 @@ const [nav,setNav] = useState(false)
           <ul className="flex flex-col justify-center items-center absolute z-999 top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
           {links.map(({id, link, url})=>(
               <li key={id} className="px-4 cursor-pointer capitalize py-6 text-4xl hover:text-white">               
-                 <NavLink to={url}>{link}</NavLink>
+                 <NavLink to={url} onClick={()=>setNav(false)}>{link}</NavLink>
               </li>                
             ))}          
           </ul>

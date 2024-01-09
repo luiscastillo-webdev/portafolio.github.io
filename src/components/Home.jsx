@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
-import HeroImage from "../assets/img/heroimage.png"
-import MuroImage from "../assets/img/muro.jpg"
+//import HeroImage from "../assets/img/heroimage.png"
+import BgImage from "../assets/img/pc01.jpg"
 import { SiAsciinema } from "react-icons/si";
 import RedesSociales from "./RedesSociales.jsx";
 import { motion } from "framer-motion"; 
@@ -26,7 +26,7 @@ const Home = () => {
         descripcion="Desarrollo y diseño para tu web o emprendimiento, destacate delante los demas y llega a la cima"    
     />
    
-    <div className="home h-screen w-full overflow-hidden" style={{backgroundImage:`url(${MuroImage})`,backgroundRepeat:'no-repeat',backgroundSize:'cover'}}>   
+    <div className="home h-screen w-full overflow-hidden" style={{backgroundImage:`url(${BgImage})`,backgroundRepeat:'no-repeat',backgroundSize:'cover'}}>   
         <div className="max-w-screen-lg mx-auto grid grid-cols-1 items-center justify-center px-4 h-full md:grid-cols-2">
             <div className="items-center justify-center mt-16 md:mt-0">
                 <h2 className='text-4xl sm:text-7xl text-slate-200 mb-4'>Diseño y Desarrollo Web</h2>
@@ -55,10 +55,10 @@ const Home = () => {
                 </div>
                 <RedesSociales/>
             </div>
-            <div className='flex w-full'>
-                <img src={HeroImage} alt="me programador" className="mx-auto w-4/3 md:w-full"/>                
+            <div className='flex justify-center'>
+                <BtnContratame/>              
             </div>  
-            <BtnContratame/>         
+                    
         </div>       
     </div>
 

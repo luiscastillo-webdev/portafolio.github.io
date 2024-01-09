@@ -1,43 +1,89 @@
 import React from 'react'
-import { motion } from 'framer-motion'
+import { motion,useSpring } from "framer-motion"
 
-const Habilidad= ({name,x,y}) => {
-  return(
-    <motion.div className='flex items-center justify-center rounded-full uppercase 
-    font-bold text-white py-3 px-6 bg-amber-600 shadow-lime-200 cursor-pointer'
-    whileHover={{scale:1.05}}
-    initial={{x:0,y:0}}
-    animate={{x:x,y:y}}
-    transition={{duration:1.5}}
-    >
-      {name}
-    </motion.div>
-  )
-}
+ 
+    const itemsHabilidades =[
+      {
+        id:1,
+        nombre:"React",
+        porcentaje:"80",
+        progreso:"w-[80%]",
+        retraso:0.1,
+        
+      },
+      {
+        id:2,
+        nombre:"HTML",
+        porcentaje:"98",
+        progreso:"w-[98%]",
+        retraso:0.2,
+      },
+       {
+        id:3,
+        nombre:"CSS",
+        porcentaje:"95",
+        progreso:"w-[95%]",
+        retraso:0.3,
+      },
+       {
+        id:4,
+        nombre:"JS",
+        porcentaje:"85",
+        progreso:"w-[85%]",
+        retraso:0.4,
+      },
+         {
+        id:5,
+        nombre:"wordpress",
+        porcentaje:"95",
+        progreso:"w-[95%]",
+        retraso:0.5,
+      },
+         {
+        id:6,
+        nombre:"Joomla",
+        porcentaje:"90",
+        progreso:"w-[90%]",
+        retraso:0.6,
+      },
+          {
+        id:7,
+        nombre:"Php",
+        porcentaje:"90",
+        progreso:"w-[90%]",
+        retraso:0.7,
+      },
+    ];
+   
+ 
 
 const Habilidades = () => {
+
+ 
+
   return (
     <>
-        <h2 className='text-white text-7xl text-center w-full mt-[10rem]'>Habilidades</h2>
-        <div className='w-full h-screen flex items-center justify-center bg-luzCircular rounded-3xl'>
-         
-          <motion.div className='flex items-center justify-center rounded-full uppercase 
-          font-bold text-white py-3 px-6 bg-amber-600 shadow-lime-200 cursor-pointer absolute'
-          whileHover={{scale:1.05}}
-         
-          >
-            web
+        <h2 className='text-white text-5xl md:text-7xl text-center w-full mt-[2rem] md:mt-[10rem]'>Habilidades</h2>
+        <div className='max-w-screen-lg mx-auto md:h-screen items-center justify-center'>   
+             
+        {itemsHabilidades.map(({id,nombre,porcentaje,progreso,retraso})=>(
+        <div 
+       
+        key={id} className="w-full flex flex-cols-6 bg-gray-200 my-6 p-1 rounded-md"
+        >      
+        <motion.div  
+          initial={{scale:0}}
+          animate={{scale:1}}
+          transition={{
+            duration:3,
+            ease:'easeInOut',
+            delay:retraso,
+          }}          
+          className={`col-span-3 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-amber-500 to-90% text-2xl font-bold text-blue-100 text-center rounded-md p-4 leading-none ${progreso}`}>
+            {nombre} <span>{porcentaje}%</span>           
           </motion.div>
-
-          <Habilidad name="wordpress" x="30vw" y="15vw"/>
-          <Habilidad name="CSS" x="-15vw" y="-10vw"/>
-          <Habilidad name="html" x="-15vw" y="12vw"/>
-          <Habilidad name="react" x="18vw" y="3vw"/>
-          <Habilidad name="javascript" x="8vw" y="-13vw"/>
-          <Habilidad name="joomla" x="-25vw" y="-16vw"/>
-          <Habilidad name="diseño" x="-32vw" y="-5vw"/>
-          <Habilidad name="bootstrap" x="2vw" y="-5vw"/>
-
+        </div>
+        ))}
         </div>
     </>
   )

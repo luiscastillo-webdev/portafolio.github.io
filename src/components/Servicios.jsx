@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion';
-import { FaHeartbeat } from "react-icons/fa";
+ 
+import { TiShoppingCart,TiBrush,TiZoom,TiSocialAtCircular,TiSpannerOutline,TiCodeOutline } from "react-icons/ti";
 
 
 
@@ -9,39 +10,39 @@ const Servicios = () => {
   const servicio=[
     {
       id:1,
-      icono:<FaHeartbeat/>,
-      titulo:"Diseño",
-      descrip:"Los mejoresergerg er  erge errthr hthhrtrt",
+      icono:<TiBrush/>,
+      titulo:"Diseño Web",
+      descrip:"Paginas web con buen gusto, diseños webs a la medida.",
     },
     {
       id:2,
-      icono:<FaHeartbeat/>,
-      titulo:"Diseño",
-      descrip:"Los mejores rgerg egregrefhgrg gre re ergergterg ",
+      icono:<TiShoppingCart/>,
+      titulo:"E Commerce",
+      descrip:"Tiendas on line, pasarelas de pagos, woocommerce, Prestashop.",
     },
     {
       id:3,
-      icono:<FaHeartbeat/>,
-      titulo:"Diseño",
-      descrip:"Los mejores hjaysdadñashduia dhdywq",
+      icono:<TiZoom/>,
+      titulo:"Optimización SEO",
+      descrip:"No solo es el el diseño, tambien es necesario rankear en los motores de busquedas como Google.",
     },
     {
       id:4,
-      icono:<FaHeartbeat/>,
-      titulo:"Diseño",
-      descrip:"Los mejoresergerg er  erge errthr hthhrtrt",
+      icono:<TiCodeOutline/>,
+      titulo:"Consultorias",
+      descrip:"Te ayudo a elegir las mejores herramientas a implementar en tu web.",
     },
     {
       id:5,
-      icono:<FaHeartbeat/>,
-      titulo:"Diseño",
-      descrip:"Los mejores rgerg egregrefhgrg gre re ergergterg ",
+      icono:<TiSocialAtCircular/>,
+      titulo:"Gestion de Redes Sociales",
+      descrip:"Mejora tu presencia en redes sociales, aumenta tu audiencia y potenciales clientes",
     },
     {
       id:6,
-      icono:<FaHeartbeat/>,
-      titulo:"Diseño",
-      descrip:"Los mejores hjaysdadñashduia dhdywq",
+      icono:<TiSpannerOutline/>,
+      titulo:"Mantenimiento de Sitios",
+      descrip:"Manteniniento y actualizaciones a tu sitio web, manten tu web al día",
     },
   ];
   return (
@@ -53,17 +54,16 @@ const Servicios = () => {
       <div className='grid grid-cols-2 md:grid-cols-6 gap-1 md:gap-2 md:max-w-screen-lg justify-center mx-auto'>
 
         {servicio.map(({id,icono,titulo,descrip})=>(
-          <div key={id} className='mb-4 mx-auto rounded bg-slate-300 md:col-span-2 text-m md:text-xl shadow-2xl'>
+          <div key={id} className='mb-4 mx-auto rounded bg-slate-300 md:col-span-2 text-m md:text-xl shadow-2xl cursor-pointer'>
             <motion.div
             className='flex justify-center py-4 md:py-8'
-            whileHover={{ scale: 1.2 }} 
-            transition={{
-              ease: "linear",
-              duration: 2,
-              x: { duration: 1 }
+            whileHover={{
+              scale: [1, 2, 2, 1, 1],
+              rotate: [0, 0, 270, 270, 0],
+              borderRadius: ["20%", "20%", "50%", "50%", "20%"],
             }}
             >
-              <span class="text-6xl shadow-inner rounded-full border border-amber-500">{icono}</span>
+              <span class="text-6xl shadow-inner rounded-full border border-sky-600">{icono}</span>
             </motion.div>
             <div className="px-2 md:px-6 py-4">
                 <div className="mb-4">
